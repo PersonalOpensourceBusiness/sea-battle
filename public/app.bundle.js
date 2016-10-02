@@ -249,7 +249,7 @@
 	    function Socket() {
 	        _classCallCheck(this, Socket);
 
-	        this.socket = (0, _socket2.default)('http://' + window.location.hostname);
+	        this.socket = (0, _socket2.default)('https://' + window.location.hostname);
 	        this.rooms;
 	        this.id = generateId();
 	        this.data;
