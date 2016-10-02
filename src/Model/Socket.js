@@ -2,7 +2,7 @@ import io from 'socket.io-client';
 
 export class Socket {
     constructor() {
-        this.socket = io('http://localhost:5000');
+        this.socket = io('http://' + window.location.hostname);
         this.rooms;
         this.id = generateId();
         this.data;
