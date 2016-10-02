@@ -9,10 +9,12 @@
     position: relative;
 
 }
+
 .field {
     border: 2px solid deepskyblue;
     border-radius: 5px;
 }
+
 .field.your {
     position: absolute;
     bottom: 0;
@@ -34,18 +36,30 @@
     width: 30px;
     height: 30px;
     display: inline-block;
-    border: 1px solid #eee;
+    border: 2px solid #eee;
     margin: 0;
     padding: 0;
 }
 
 .cell.hover {
-    border-color: mediumspringgreen;
+    border: 2px solid mediumspringgreen;
     background: mediumspringgreen;
 }
+
+.enemy .cell.hover {
+    border: 2px solid tomato;
+    background: rgba(255, 119, 84, 0.35);
+}
+
 .cell.ship {
     border-color: deepskyblue;
     background: deepskyblue;
+}
+.cell.hit {
+    background: mediumvioletred;
+}
+.cell.miss {
+    background: cadetblue;
 }
 .cell:hover {
     cursor: pointer;
@@ -71,4 +85,13 @@
 
 .playersBlock__container {
     display: flex;
+}
+
+.interface__item.active {
+    color: #09ff09;
+}
+
+.man {
+    font-size: 0;
+    background: #09ff09;
 }

@@ -8,44 +8,11 @@ export class Board {
     init(matrix, className) {
         return render(matrix, this.app, className);
     }
-
-    miss(x, y) {
-        console.log('Miss: ', x, y);
-    }
-
-    hit(x, y) {
-        console.log('Hit: ', x, y);
-    }
-    shoot(x, y) {
-        console.log('Shoot: ', x, y);
-    }
-    move(x, y, board) {
-        let row = board.querySelectorAll('.row');
-
-        row[y + 1].querySelectorAll('.cell')[x].classList.add('hover');
-        row[y].querySelectorAll('.cell')[x].classList.add('hover');
-        row[y - 1].querySelectorAll('.cell')[x].classList.add('hover');
-    }
-
-    remove(x, y, board) {
-        let row = board.querySelectorAll('.row');
-        
-        row[y + 1].querySelectorAll('.cell')[x].classList.remove('hover');
-        row[y].querySelectorAll('.cell')[x].classList.remove('hover');
-        row[y - 1].querySelectorAll('.cell')[x].classList.remove('hover');
-    }
-
-    create(x, y, board) {
-        let row = board.querySelectorAll('.row');
-
-        row[y + 1].querySelectorAll('.cell')[x].classList.add('ship');
-        row[y].querySelectorAll('.cell')[x].classList.add('ship');
-        row[y - 1].querySelectorAll('.cell')[x].classList.add('ship');
-    }
 }
 
 const generate = (matrix, className) => {
     let field = document.createElement('div');
+    console.log(className);
     field.classList.add('field', className);
 
     for(let i = 0; i < matrix.length; i++) {

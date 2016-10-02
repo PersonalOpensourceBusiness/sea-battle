@@ -13,7 +13,9 @@ export class Interface {
             '<h1>Sea battle</h1>',
             '<hr>',
             '<div>',
-                '<button id="create">Create game</button>',
+                '<button id="create">Создать игру</button>',
+                '<button id="bot">Создать игру с ботом</button>',
+                '<button id="join">Присоединиться к игре</button>',
             '</div>',
             '</div>'
         ].join('');
@@ -26,8 +28,27 @@ export class Interface {
             '<hr>',
             '<div>',
                 'Сколько игроков?',
-                '<input type="number" max="20" min="2" id="players">',
+                '<input type="number" max="20" min="2" value="2" id="players">',
                 '<button id="init">Init game</button>',
+            '</div>',
+            '</div>'
+        ].join('');
+    }
+    join(room) {
+        var result = [];
+        for(var i = 0; i < room.length; i++) {
+            result.push('<li class="interface__item interface-js-item" data-room="'+room[i]+'"><b>'+room[i]+'</b></li>');
+        }
+        return [
+            '<div class="interface">',
+            '<h1>Sea battle</h1>',
+            '<hr>',
+            '<div>',
+            'Список комнат',
+            '<ul class="interface__view">',
+            result.join(''),
+            '</ul>',
+            '<button id="join-game">Join game</button>',
             '</div>',
             '</div>'
         ].join('');

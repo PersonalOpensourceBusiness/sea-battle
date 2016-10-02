@@ -1,21 +1,13 @@
-export class Ship {
-    constructor(size) {
-        this.size = size;
-        this.body = [];
-    }
-    
-    shot() {
-
-    }
-
-    destroy() {
-
-    }
-
-    create() {
-        for(let i = 0; i < this.size; i++) {
-            this.body.push(this.size);
+    export class Ship {
+        constructor(size) {
+            this.size = size;
         }
-        return this.body;
+
+        createShip() {
+            let result = [];
+            for(let i = 0; i < this.size; i++) {
+                result.push(this.size);
+            }
+            return result;
+        }
     }
-}
